@@ -1,0 +1,1 @@
+// Görevlerin tamamlanma doðruluðu
