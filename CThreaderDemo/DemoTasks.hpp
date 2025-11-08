@@ -1,21 +1,21 @@
-#pragma once
+ï»¿#pragma once
 #include <vector>
 #include <cstdint>
 
 namespace Workloads {
-    // Yardımcı: Test için rastgele veri üretir
+    // YardÄ±mcÄ±: Test iÃ§in rastgele veri Ã¼retir
     std::vector<double> GenerateRandomData(size_t size, int seed = 42);
     std::vector<int> GenerateRandomIntData(size_t size, int seed = 42);
 
-    // 1. Saf CPU Yükü (Ağır Matematik)
+    // 1. Saf CPU YÃ¼kÃ¼ (AÄŸÄ±r Matematik)
     double HeavyMathTask(long long iterations);
 
-    // 2. CPU + Bellek Yükü (Matris Çarpımı - NxN)
+    // 2. CPU + Bellek YÃ¼kÃ¼ (Matris Ã‡arpÄ±mÄ± - NxN)
     std::vector<double> MatrixMultiplication(size_t N, const std::vector<double>& A, const std::vector<double>& B);
 
-    // 3. Bellek Bant Genişliği Yükü (Görüntü İşleme Simülasyonu)
+    // 3. Bellek Bant GeniÅŸliÄŸi YÃ¼kÃ¼ (GÃ¶rÃ¼ntÃ¼ Ä°ÅŸleme SimÃ¼lasyonu)
     void ImageProcessing(std::vector<double>& data, size_t start_index, size_t end_index);
 
-    // 4. Bellek Gecikmesi Yükü (Rastgele Erişim - Cache Miss)
+    // 4. Bellek Gecikmesi YÃ¼kÃ¼ (Rastgele EriÅŸim - Cache Miss)
     long long RandomMemoryAccess(const std::vector<int>& large_data, size_t access_count, int seed);
 }

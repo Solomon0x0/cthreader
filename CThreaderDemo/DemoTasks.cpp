@@ -1,4 +1,4 @@
-#include "DemoTasks.hpp"
+ï»¿#include "DemoTasks.hpp"
 #include <cmath>
 #include <random>
 #include <numeric>
@@ -26,17 +26,17 @@ namespace Workloads {
         return data;
     }
 
-    // GÖREV 1: Aðýr Matematik (CPU Bound)
+    // GÃ–REV 1: AÄŸÄ±r Matematik (CPU Bound)
     double HeavyMathTask(long long iterations) {
         double result = 0.0;
         for (long long i = 0; i < iterations; ++i) {
-            // Kasýtlý olarak karmaþýklaþtýrýlmýþ anlamsýz bir iþlem
+            // KasÄ±tlÄ± olarak karmaÅŸÄ±klaÅŸtÄ±rÄ±lmÄ±ÅŸ anlamsÄ±z bir iÅŸlem
             result += std::sin(static_cast<double>(i)) * std::cos(static_cast<double>(i)) + std::sqrt(static_cast<double>(i) + 1.0);
         }
         return result;
     }
 
-    // GÖREV 2: Matris Çarpýmý (CPU & Memory Bound)
+    // GÃ–REV 2: Matris Ã‡arpÄ±mÄ± (CPU & Memory Bound)
     std::vector<double> MatrixMultiplication(size_t N, const std::vector<double>& A, const std::vector<double>& B) {
         if (A.size() < N * N || B.size() < N * N) return {};
 
@@ -52,12 +52,12 @@ namespace Workloads {
         return C;
     }
 
-    // GÖREV 3: Görüntü Ýþleme Simülasyonu (Memory Bandwidth)
+    // GÃ–REV 3: GÃ¶rÃ¼ntÃ¼ Ä°ÅŸleme SimÃ¼lasyonu (Memory Bandwidth)
     void ImageProcessing(std::vector<double>& data, size_t start_index, size_t end_index) {
         if (start_index >= data.size() || end_index > data.size()) return;
 
         for (size_t i = start_index; i < end_index; ++i) {
-            // Piksel baþýna aðýr bir filtre simülasyonu
+            // Piksel baÅŸÄ±na aÄŸÄ±r bir filtre simÃ¼lasyonu
             double val = data[i];
             for (int j = 0; j < 20; ++j) {
                 val = std::sqrt(std::abs(val * std::sin(val) * 3.14159));
@@ -66,15 +66,15 @@ namespace Workloads {
         }
     }
 
-    // GÖREV 4: Rastgele Bellek Eriþimi (Latency Bound)
+    // GÃ–REV 4: Rastgele Bellek EriÅŸimi (Latency Bound)
     long long RandomMemoryAccess(const std::vector<int>& large_data, size_t access_count, int seed) {
         long long sum = 0;
         std::mt19937 gen(seed);
-        // Dizi sýnýrlarý içinde rastgele indeks üret
+        // Dizi sÄ±nÄ±rlarÄ± iÃ§inde rastgele indeks Ã¼ret
         std::uniform_int_distribution<size_t> dis(0, large_data.size() - 1);
 
         for (size_t i = 0; i < access_count; ++i) {
-            // Rastgele indekse eriþim
+            // Rastgele indekse eriÅŸim
             sum += large_data[dis(gen)];
         }
         return sum;
