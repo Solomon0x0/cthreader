@@ -16,7 +16,6 @@
 
 #include "CThreader/CThreader.hpp"
 
-#include "DemoTasks.hpp"
 
 // ───────────────────────────────────────────────────────────────────────────────
 // 1) Serbest (free) fonksiyon örnekleri

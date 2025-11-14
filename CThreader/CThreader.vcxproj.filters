@@ -3,11 +3,11 @@
   <ItemGroup>
     <ClInclude Include="include\CThreader\CThreader.hpp" />
     <ClInclude Include="include\CThreader\ThreadPool.hpp" />
-    <ClInclude Include="include\CThreader\Errors.hpp" />
     <ClInclude Include="include\CThreader\Task.hpp" />
     <ClInclude Include="include\CThreader\TaskResult.hpp" />
     <ClInclude Include="include\CThreader\Task.ipp" />
     <ClInclude Include="include\CThreader\CpuRelax.hpp" />
+    <ClInclude Include="include\CThreader\Utils.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ThreadPool.cpp" />
